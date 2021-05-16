@@ -5,17 +5,17 @@ provider "aws" {
 
 ################################################
 locals {
-  common_tags = {
-    "Environment"       = var.medtronic-tags["environment-stage"]
-    "Business Unit"     = var.medtronic-tags["business-unit"]
-    "Business Contact"  = var.medtronic-tags["business-contact"]
-    "Support Contact"   = var.medtronic-tags["support-contact"]
-    "Cost Center"       = var.medtronic-tags["cost-center"]
-    "WBS"               = var.medtronic-tags["wbs-code"]
-    "deployment_source" = var.project-info["deployment-source"]
-    "project-id"         = var.project-info["project-id"]
-    "environment_name"  = var.project-info["environment-name"]
-  }
+  # common_tags = {
+  #   "Environment"       = var.medtronic-tags["environment-stage"]
+  #   "Business Unit"     = var.medtronic-tags["business-unit"]
+  #   "Business Contact"  = var.medtronic-tags["business-contact"]
+  #   "Support Contact"   = var.medtronic-tags["support-contact"]
+  #   "Cost Center"       = var.medtronic-tags["cost-center"]
+  #   "WBS"               = var.medtronic-tags["wbs-code"]
+  #   "deployment_source" = var.project-info["deployment-source"]
+  #   "project-id"         = var.project-info["project-id"]
+  #   "environment_name"  = var.project-info["environment-name"]
+  # }
 
   Lambda-name = "${var.appshortname}-${var.envtype}-${var.apishortname}-Lambda" 
   
@@ -89,7 +89,7 @@ module lambda {
   lambda_timeout = "20"
   log_retention  = "1"
   role_arn       = aws_iam_role.iam.arn
-  tags           = local.common_tags
+  #tags           = local.common_tags
 
   # vpc_config = {
   #   subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]

@@ -1,23 +1,23 @@
-variable "medtronic-tags" {
-  type = object({
-    environment-stage = string
-    cost-center = string
-    business-unit = string
-    business-contact = string
-    support-contact = string
-    wbs-code = string
-  })
-  description = "tags required by medtronic"
-}
+# variable "medtronic-tags" {
+#   type = object({
+#     environment-stage = string
+#     cost-center = string
+#     business-unit = string
+#     business-contact = string
+#     support-contact = string
+#     wbs-code = string
+#   })
+#   description = "tags required by medtronic"
+# }
 
-variable "project-info" {
-  type = object({
-    environment-name =  string
-    deployment-source = string
-    project-id = string
-  })
-  description = "tags for the project"
-}
+# variable "project-info" {
+#   type = object({
+#     environment-name =  string
+#     deployment-source = string
+#     project-id = string
+#   })
+#   description = "tags for the project"
+# }
 
 variable "appshortname" { 
     type = string 
