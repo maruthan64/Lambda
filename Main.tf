@@ -30,7 +30,7 @@ data archive_file lambda {
 
 
 resource aws_iam_role iam {
-  name = "iam_for_lambda_tf"
+  name = "iam_for_lambda1_tf"
 
   assume_role_policy = <<EOF
 {
@@ -50,7 +50,7 @@ EOF
 }
 
 resource aws_iam_policy this {
-  name        = "Lambda-policy"
+  name        = "Lambda-policy1"
   description = "Allow to access base resources and trigger transcoder"
   policy      = <<EOF
 {
